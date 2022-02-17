@@ -1,0 +1,10 @@
+#navIcon:before,
+#navIcon:after {
+  border: none;
+  shadow: none;
+}
+
+.link {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
