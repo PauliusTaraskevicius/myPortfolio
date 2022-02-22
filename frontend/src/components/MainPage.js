@@ -4,6 +4,8 @@ import Navbar from "./Navigation/Navbar";
 import About from "./About/About";
 import SwitchBox from "./Switcher/SwitchBox";
 import WorksSlider from "./WorksSlider/WorksSlider";
+import Contact from "./Contact/Contact";
+
 
 const MainPage = () => {
   return (
@@ -13,6 +15,7 @@ const MainPage = () => {
       <Hero />
       <About />
       <WorksSlider />
+      <Contact />
     </div>
   );
 };
