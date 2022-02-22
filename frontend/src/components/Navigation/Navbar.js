@@ -1,11 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <div>
-      <nav className="navheader fixed w-screen lg:px-40 sm:px-10 px-2 sm:flex justify-between items-center border-b-1 border-gray-600">
+      <nav className="fixed w-screen mt-1 lg:px-40 sm:px-10 px-2 sm:flex justify-between items-center border-b-1 border-gray-600">
         <div className="flex px-4 justify-between sm:py-0 pb-1">
           <a href="/">
             <img
@@ -25,19 +26,24 @@ const Navbar = () => {
 
         <ul className="hidden sm:flex cursor-pointer" id="navContent">
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <a className="link" href="/">
+            <NavLink exact to="/" className="link">
               Home
-            </a>
+            </NavLink>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <a className="link" href="/">
+            <NavLink to="/work" className="link">
+              About
+            </NavLink>
+          </li>
+          <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
+            <NavLink exact to="/about" className="link">
               Work
-            </a>
+            </NavLink>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <a className="link" href="/">
+            <NavLink to="/contact" className="link">
               Contact
-            </a>
+            </NavLink>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
             <a className="link" href="/">

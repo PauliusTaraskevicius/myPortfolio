@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../Navigation/Navbar";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen">
-      <Navbar />
-      <section className="w-full h-3/4 bg-gray-800">
+    <div className="w-full ">
+      <section className="w-full h-screen">
         <div className="container w-full h-full px-8 sm:px-0 mx-auto flex flex-col justify-center">
           <h1 className="text-6xl text-gray-100 font-bold">
             Lorem ipsum dolor sit amet
@@ -16,8 +14,11 @@ const Hero = () => {
             nibh mauris eu neque.
           </p>
         </div>
+        <hr />
       </section>
+      
     </div>
+    
   );
 };
 
