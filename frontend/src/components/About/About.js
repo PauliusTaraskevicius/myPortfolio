@@ -81,7 +81,7 @@ const About = () => {
       </div>
 
       {/* Pop up */}
-      <div className="fixed inset-x-0 lg:inset-x-auto bottom-6 lg:right-8 xl:right-10 xl:bottom-8">
+      {/* <div className="fixed inset-x-0 lg:inset-x-auto bottom-6 lg:right-8 xl:right-10 xl:bottom-8">
         <div className="lg:w-72 px-6 lg:px-0">
           <div className="p-2 bg-blue-600 rounded-lg shadow-lg sm:p-3">
             <div className="flex flex-wrap items-center justify-between">
@@ -110,7 +110,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <hr />
     </section>
   );

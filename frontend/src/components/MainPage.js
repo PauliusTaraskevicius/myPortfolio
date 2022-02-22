@@ -5,6 +5,7 @@ import About from "./About/About";
 import SwitchBox from "./Switcher/SwitchBox";
 import WorksSlider from "./WorksSlider/WorksSlider";
 import Contact from "./Contact/Contact";
+import Footer from "./Footer/Footer";
 
 
 const MainPage = () => {
@@ -16,6 +17,7 @@ const MainPage = () => {
       <About />
       <WorksSlider />
       <Contact />
+      <Footer />
     </div>
   );
 };
