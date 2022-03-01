@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
 
-    const successMsg = () => toast.success('Message sent!🥳', {
+    const successMsg = () => toast.success('Message sent! 🥳', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -17,7 +17,7 @@ const Contact = () => {
         progress: undefined,
     });
 
-    const errorMsg = () => toast.error('Error! Try again later...⛔', {
+    const errorMsg = () => toast.error('Error! Try again later... ⛔', {
         position: "top-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -42,7 +42,7 @@ const Contact = () => {
     };
     
     return (
-        <div className="contact-form flex justify-center">
+        <div className="contact-form flex justify-center" id='contact'>
             <form onSubmit={sendEmail} className="form bg-transparent p-6 my-10 relative">
             <ToastContainer 
                 position="top-center"

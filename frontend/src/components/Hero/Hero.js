@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <section className="w-full h-screen">
         <div className="container w-full h-full px-8 sm:px-0 mx-auto flex flex-col justify-center">
           <h1 className="text-6xl text-gray-100 font-bold">

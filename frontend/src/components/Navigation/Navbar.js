@@ -1,20 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+
+import { Link } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <div>
-      <nav className="fixed w-screen mt-1 lg:px-40 sm:px-10 px-2 sm:flex justify-between items-center border-b-1 border-gray-600">
+      <nav className="fixed w-screen mt-1 lg:px-40 sm:px-10 px-2 sm:flex justify-between items-center border-b-1 border-gray-600 z-40">
         <div className="flex px-4 justify-between sm:py-0 pb-1">
-          <a href="/">
-            <img
-              src="https://ravencolevol.github.io/react-portfolio/static/b7742c4d36a8aad0eae9e469b8af55d5/e8676/logo.png"
-              alt="Logo"
-              className="h-12"
-            />
-          </a>
+          <img
+            src="https://ravencolevol.github.io/react-portfolio/static/b7742c4d36a8aad0eae9e469b8af55d5/e8676/logo.png"
+            alt="Logo"
+            className="h-12 cursor-pointer"
+            onClick={() => scroll.scrollToTop()}
+          />
 
           <button
             className="text-blue-300 text-3xl sm:hidden block focus:outline-none"
@@ -26,24 +27,24 @@ const Navbar = () => {
 
         <ul className="hidden sm:flex cursor-pointer" id="navContent">
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <NavLink exact to="/" className="link">
+            <Link exact to="/" className="link" onClick={() => scroll.scrollToTop()}>
               Home
-            </NavLink>
+            </Link>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <NavLink to="/work" className="link">
+            <Link to="about" className="link" smooth={true} duration={1000}>
               About
-            </NavLink>
+            </Link>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <NavLink exact to="/about" className="link">
+            <Link exact to="work" className="link" smooth={true} duration={1000}>
               Work
-            </NavLink>
+            </Link>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <NavLink to="/contact" className="link">
+            <Link to="contact" className="link" smooth={true} duration={1000}>
               Contact
-            </NavLink>
+            </Link>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
             <a className="link" href="/">

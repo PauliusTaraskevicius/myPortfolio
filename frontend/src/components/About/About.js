@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="dark:bg-gray-800">
+    <section className="dark:bg-gray-800" id='about'>
       <div className="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
         <div className="w-full lg:w-1/2">
           <div className="lg:max-w-lg">
@@ -79,6 +79,7 @@ const About = () => {
           />
         </div>
       </div>
+      <hr />
 
       {/* Pop up */}
       {/* <div className="fixed inset-x-0 lg:inset-x-auto bottom-6 lg:right-8 xl:right-10 xl:bottom-8">
@@ -111,7 +112,6 @@ const About = () => {
           </div>
         </div>
       </div> */}
-      <hr />
     </section>
   );
 };
