@@ -1,24 +1,26 @@
 import React from "react";
+
 import Hero from "./Hero/Hero";
 import Navbar from "./Navigation/Navbar";
 import About from "./About/About";
-import SwitchBox from "./Switcher/SwitchBox";
 import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 import Card from "./Card/Card";
 
+import SwitchBox from "./Switcher/SwitchBox";
+
 const MainPage = () => {
 
   return (
-    <div>
+    <React.Fragment>
       <Navbar />
-      <SwitchBox />
       <Hero />
       <About />
       <Card />
+      <SwitchBox />
       <Contact />
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

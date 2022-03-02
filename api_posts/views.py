@@ -22,19 +22,19 @@ class PostListView(APIView):
 
 class PostDetailView(APIView):
 
-    def get_object(self, id):
+    def get_object(self, slug):
         try:
-            return Post.objects.get(id=id)
+            return Post.objects.get(slug=slug)
         except Post.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
     
-    def get(self, request, id):
-        post = self.get_object(id=id)
+    def get(self, request, slug):
+        post = self.get_object(slug=slug)
         serializer = PostSerializer(post)
         return Response(serializer.data)
 
-    def put(self, request, id):
-        post = self.get_object(id=id)
+    def put(self, request, slug):
+        post = self.get_object(slug=slug)
         serializer = PostSerializer(post, data=request.data)
 
         if serializer.is_valid():
@@ -43,7 +43,7 @@ class PostDetailView(APIView):
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    def delete(self, request, id):
-        post = self.get_object(id=id)
+    def delete(self, request, slug):
+        post = self.get_object(slug=slug)
         post.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
