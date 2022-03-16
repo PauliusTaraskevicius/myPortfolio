@@ -23,8 +23,8 @@ const Footer = () => {
                     <div>
                         <a href="/" className="text-xl font-bold">Brand</a>
                     </div>
-                    <div class="flex mt-4 md:m-0">
-                        <div class="-mx-4">
+                    <div className="flex mt-4 md:m-0">
+                        <div className="-mx-4">
                         
                         <a href="/" className="inline-block"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt='fb'/></a>
                         <a href="/" className="inline-block"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt='inst'/></a>

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import ConnectApi from "../api/ConnectApi";
 
-const PostDetail = (params) => {
+const PostDetail = () => {
   const { slug } = useParams();
 
   const API_URL = `http://127.0.0.1:8000/posts/${slug}`;
@@ -12,41 +12,37 @@ const PostDetail = (params) => {
 
   const BASE_URL = "http://127.0.0.1:8000";
 
-
   return (
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-      <div class="md:p-8 p-2 bg-white">
-        <img
-          class="rounded-lg w-full"
-          src={`${BASE_URL}${dataState.data.thumbnail}`}
-          alt='post_img'
-        />
-
-        <p class="text-indigo-500 font-semibold text-base mt-2">
-          {dataState.data.title}
-        </p>
-
-        <h1 class="font-semibold text-gray-900 leading-none text-xl mt-1 capitalize truncate">
-          {dataState.data.sub_title}
-        </h1>
-
-        <div class="max-w-full">
-          <p class="text-base font-medium tracking-wide text-gray-600 mt-1">
-            {dataState.data.body}
-          </p>
-        </div>
-        <div class="flex items-center space-x-2 mt-20">
+    <div className="mx-auto px-4 py-8 max-w-xl my-20">
+      <div className="bg-white shadow-2xl rounded-lg mb-6 tracking-wide">
+        <div className="md:flex-shrink-0">
           <img
-            class="w-10 h-10 object-cover object-center rounded-full"
-            src="https://randomuser.me/api/portraits/men/54.jpg"
-            alt="random user"
+            src={`${BASE_URL}${dataState.data.thumbnail}`}
+            alt="mountains"
+            className="w-full h-64 rounded-lg rounded-b-none"
           />
-          <div>
-            <p class="text-gray-900 font-semibold">Lugano Shabani</p>
-            <p class="text-gray-500 font-semibold text-sm">
-              Feb 24,2021 &middot; 6 min read
-            </p>
+        </div>
+        <div className="px-4 py-2 mt-2">
+          <h1 className="font-bold text-2xl text-gray-800 tracking-normal">
+            {dataState.data.title}
+          </h1>
+          <h2 className="font-bold text-1xl text-gray-700 tracking-normal">
+            {dataState.data.sub_title}
+          </h2>
+          <p className="text-sm text-gray-700 px-2 mr-1">{dataState.data.body}</p>
+          
+          <div className="author flex items-center -ml-3 my-3">
+            <div className="user-logo">
+              <img
+                className="w-12 h-12 object-cover rounded-full mx-4 shadow"
+                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80"
+                alt="avatar"
+              />
+            </div>
+            <h2 className="text-sm tracking-tighter text-gray-900 ">
+              <a href="/">By Mohammed Ibrahim</a>{" "}
+              <span className="text-gray-600">{dataState.data.created}</span>
+            </h2>
           </div>
         </div>
       </div>

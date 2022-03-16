@@ -27,7 +27,7 @@ const Navbar = () => {
 
         <ul className="hidden sm:flex cursor-pointer" id="navContent">
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <Link exact to="/" className="link" onClick={() => scroll.scrollToTop()}>
+            <Link to="/" className="link" onClick={() => scroll.scrollToTop()}>
               Home
             </Link>
           </li>
@@ -37,7 +37,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <Link exact to="work" className="link" smooth={true} duration={1000}>
+            <Link  to="work" className="link" smooth={true} duration={1000}>
               Work
             </Link>
           </li>

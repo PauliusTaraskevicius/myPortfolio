@@ -11,6 +11,7 @@ const Card = () => {
   const API_URL = "http://127.0.0.1:8000/posts/";
   const [dataState] = ConnectApi(API_URL);
 
+
   return (
     <section id="work" className="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
       <div className="container">
@@ -41,7 +42,7 @@ const Card = () => {
         </div>
         <div className="flex flex-wrap -mx-4">
           {dataState.data.map((post) => (
-            <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div key={post.slug} className="w-full md:w-1/2 lg:w-1/3 px-4">
               <div className="max-w-[370px] mx-auto mb-10">
                 <div className="rounded overflow-hidden mb-8">
                   <img
@@ -72,6 +73,7 @@ const Card = () => {
                     <Link
                       to={`/posts/${post.slug}`}
                       className="
+                        fadeIn
                         font-semibold
                         text-xl
                         sm:text-2xl

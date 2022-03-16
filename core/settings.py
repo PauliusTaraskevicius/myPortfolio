@@ -163,3 +163,8 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
+
+REST_FRAMEWORK = {
+
+    'DATETIME_FORMAT': "%m/%d/%Y - %H:%M:%S",
+}
