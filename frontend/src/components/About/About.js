@@ -27,7 +27,7 @@ const About = () => {
                   />
                 </svg>
 
-                <span className="mx-2">Clean and Simple Layout</span>
+                <span className="mx-2 text-white">Clean and Simple Layout</span>
               </p>
 
               <p className="flex items-center -mx-2 text-gray-700 dark:text-gray-200">
@@ -46,7 +46,7 @@ const About = () => {
                   />
                 </svg>
 
-                <span className="mx-2">Just Copy Paste Codeing</span>
+                <span className="mx-2 text-white">Just Copy Paste Codeing</span>
               </p>
 
               <p className="flex items-center -mx-2 text-gray-700 dark:text-gray-200">
@@ -65,7 +65,7 @@ const About = () => {
                   />
                 </svg>
 
-                <span className="mx-2">Easy to Use</span>
+                <span className="mx-2 text-white">Easy to Use</span>
               </p>
             </div>
           </div>

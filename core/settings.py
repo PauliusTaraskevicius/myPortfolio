@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'api_posts',
+    #3rd party apps
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +128,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
 ]
+MEDIAL_URL  = '/media/',
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 SITE_ID = 1
 # Default primary key field type
@@ -165,6 +170,18 @@ CORS_ALLOW_HEADERS = [
 ]
 
 REST_FRAMEWORK = {
-
     'DATETIME_FORMAT': "%m/%d/%Y - %H:%M:%S",
+}
+
+
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    }
 }

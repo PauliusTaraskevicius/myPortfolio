@@ -8,6 +8,7 @@ import { animateScroll as scroll } from "react-scroll";
 import "./Navbar.css";
 
 const Navbar = () => {
+  
   const [navColor, setNavColor] = useState("transparent");
 
   const listenScrollEvent = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav style={{'background-color': navColor}} className="fixed w-screen lg:px-40 sm:px-10 px-2 sm:flex justify-between items-center border-b-1 border-gray-600 z-40">
+      <nav style={{'backgroundColor': navColor}} className="fixed w-screen lg:px-40 sm:px-10 px-2 sm:flex justify-between items-center border-b-1 border-gray-600 z-40">
         <div className="flex px-4 justify-between sm:py-0 pb-1">
           <img
             src="https://ravencolevol.github.io/react-portfolio/static/b7742c4d36a8aad0eae9e469b8af55d5/e8676/logo.png"

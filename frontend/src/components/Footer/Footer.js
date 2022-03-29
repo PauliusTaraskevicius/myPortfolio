@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="flex justify-center px-4 text-gray-100 bg-gray-800">
             <div className="container py-6">
-                <h1 className="text-center text-lg font-bold lg:text-2xl">
+                <h1 className="text-center text-lg font-bold lg:text-2xl text-white">
                     Subscribe and never miss out on new updates, projects and more! ✔
                 </h1>
 

@@ -11,7 +11,6 @@ const Card = () => {
   const API_URL = "http://127.0.0.1:8000/posts/";
   const [dataState] = ConnectApi(API_URL);
 
-
   return (
     <section id="work" className="pt-20 lg:pt-[120px] pb-10 lg:pb-20">
       <div className="container">
@@ -40,35 +39,18 @@ const Card = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap -mx-4">
+        <div className="flex flex-wrap -mx-4 text-center">
           {dataState.data.map((post) => (
             <div key={post.slug} className="w-full md:w-1/2 lg:w-1/3 px-4">
               <div className="max-w-[370px] mx-auto mb-10">
-                <div className="rounded overflow-hidden mb-8">
+                <div className="rounded overflow-hidden mb-4">
                   <img
                     src={`${BASE_URL}${post.thumbnail}`}
-                    alt="work_img"
+                    alt="post_img"
                     className="w-full"
                   />
                 </div>
                 <div>
-                  <span
-                    className="
-                     bg-primary
-                     rounded
-                     inline-block
-                     text-center
-                     py-1
-                     px-4
-                     text-xs
-                     leading-loose
-                     font-semibold
-                     text-white
-                     mb-5
-                     "
-                  >
-                    {post.created}
-                  </span>
                   <h3>
                     <Link
                       to={`/posts/${post.slug}`}
@@ -79,10 +61,10 @@ const Card = () => {
                         sm:text-2xl
                         lg:text-xl
                         xl:text-2xl
-                        mb-4
+                        mb-2
                         inline-block
-                        text-dark
                         hover:text-primary
+                        text-white
                         "
                     >
                       {post.title}

@@ -19,7 +19,7 @@ const PostDetail = () => {
   const BASE_URL = "http://127.0.0.1:8000";
 
   return (
-    <div className="fixed inset-0 overflow-y-auto" onClick={back}>
+    <div className="fixed inset-0 overflow-y-auto">
       <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
           <div className="absolute inset-0"></div>
@@ -53,7 +53,10 @@ const PostDetail = () => {
             {dataState.data.created}
           </div>
           <div className="body-modal p-4">
-            <div className="content">{dataState.data.body}</div>
+            <p
+              className="text-gray-400"
+              dangerouslySetInnerHTML={{ __html: dataState.data.body }}
+            />
           </div>
           <div className="footer-modal px-4 pt-2.5 pb-4">
             <div className="flex justify-between">
