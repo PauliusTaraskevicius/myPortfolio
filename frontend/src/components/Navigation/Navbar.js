@@ -1,14 +1,26 @@
 import React from "react";
 
+import { useState, useEffect } from "react";
+
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [navColor, setNavColor] = useState("transparent");
+
+  const listenScrollEvent = () => {
+    window.scrollY > 5 ? setNavColor("rgb(44, 57, 74)") : setNavColor("transparent");
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+  });
+
   return (
     <div>
-      <nav className="fixed w-screen mt-1 lg:px-40 sm:px-10 px-2 sm:flex justify-between items-center border-b-1 border-gray-600 z-40">
+      <nav style={{'background-color': navColor}} className="fixed w-screen lg:px-40 sm:px-10 px-2 sm:flex justify-between items-center border-b-1 border-gray-600 z-40">
         <div className="flex px-4 justify-between sm:py-0 pb-1">
           <img
             src="https://ravencolevol.github.io/react-portfolio/static/b7742c4d36a8aad0eae9e469b8af55d5/e8676/logo.png"
@@ -37,7 +49,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent hover:border-blue-300 sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <Link  to="work" className="link" smooth={true} duration={1000}>
+            <Link to="work" className="link" smooth={true} duration={1000}>
               Work
             </Link>
           </li>
