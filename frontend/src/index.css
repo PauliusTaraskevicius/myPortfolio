@@ -8,8 +8,12 @@
   scroll-behavior: smooth;
 }
 
+html,
 body {
   background-color: rgb(31 41 55);
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
 }
 
 p,
@@ -27,3 +31,7 @@ hr {
   background-color: #333;
 }
 
+img {
+  height: auto;
+  max-width: 100%;
+}

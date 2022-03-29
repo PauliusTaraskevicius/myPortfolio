@@ -1,11 +1,17 @@
 import React from "react";
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import ConnectApi from "../api/ConnectApi";
 
 const PostDetail = () => {
   const { slug } = useParams();
+  let history = useNavigate();
+
+  let back = (e) => {
+    e.stopPropagation();
+    history("/");
+  };
 
   const API_URL = `http://127.0.0.1:8000/posts/${slug}`;
   const [dataState] = ConnectApi(API_URL);
@@ -13,36 +19,56 @@ const PostDetail = () => {
   const BASE_URL = "http://127.0.0.1:8000";
 
   return (
-    <div className="mx-auto px-4 py-8 max-w-xl my-20">
-      <div className="bg-white shadow-2xl rounded-lg mb-6 tracking-wide">
-        <div className="md:flex-shrink-0">
-          <img
-            src={`${BASE_URL}${dataState.data.thumbnail}`}
-            alt="mountains"
-            className="w-full h-64 rounded-lg rounded-b-none"
-          />
+    <div className="fixed inset-0 overflow-y-auto" onClick={back}>
+      <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="fixed inset-0 transition-opacity" aria-hidden="true">
+          <div className="absolute inset-0"></div>
         </div>
-        <div className="px-4 py-2 mt-2">
-          <h1 className="font-bold text-2xl text-gray-800 tracking-normal">
+        <span
+          className="hidden sm:inline-block sm:align-middle sm:h-screen"
+          aria-hidden="true"
+        >
+          &#8203;
+        </span>
+        <div
+          className="inline-block align-bottom bg-white rounded-xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-headline"
+        >
+          <div className="md:flex-shrink-0">
+            <img
+              src={`${BASE_URL}${dataState.data.thumbnail}`}
+              alt="post_image"
+              className="w-full rounded-lg rounded-b-none object-cover"
+            />
+          </div>
+          <div className="header-modal py-3 px-4 bg-blue-400 text-white font-semibold shadow-lg text-lg break-words">
             {dataState.data.title}
-          </h1>
-          <h2 className="font-bold text-1xl text-gray-700 tracking-normal">
+          </div>
+          <div className="header-modal py-3 px-4 text-gray-400 font-semibold text-md break-words">
             {dataState.data.sub_title}
-          </h2>
-          <p className="text-sm text-gray-700 px-2 mr-1">{dataState.data.body}</p>
-          
-          <div className="author flex items-center -ml-3 my-3">
-            <div className="user-logo">
+          </div>
+          <div className="header-modal px-4 text-gray-400 text-sm">
+            {dataState.data.created}
+          </div>
+          <div className="body-modal p-4">
+            <div className="content">{dataState.data.body}</div>
+          </div>
+          <div className="footer-modal px-4 pt-2.5 pb-4">
+            <div className="flex justify-between">
               <img
-                className="w-12 h-12 object-cover rounded-full mx-4 shadow"
+                className="w-12 h-12 object-cover rounded-full mx-1 shadow"
                 src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80"
                 alt="avatar"
               />
+              <button
+                className="ml-2 bg-red-500 text-white px-8 rounded-lg py-2 hover:bg-red-700"
+                onClick={back}
+              >
+                Close
+              </button>
             </div>
-            <h2 className="text-sm tracking-tighter text-gray-900 ">
-              <a href="/">By Mohammed Ibrahim</a>{" "}
-              <span className="text-gray-600">{dataState.data.created}</span>
-            </h2>
           </div>
         </div>
       </div>

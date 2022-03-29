@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import PostDetail from "../PostDetail/PostDetail";
 import Modal from "../Modal/Modal";
 
+
 const SwitchBox = () => {
 
   return (
