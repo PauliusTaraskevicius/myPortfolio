@@ -17,25 +17,13 @@ const Card = () => {
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="w-full px-4">
             <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
-              <span className="font-semibold text-lg text-primary mb-2 block">
+              <h2 className="font-bold text-3xl mb-2 block">
                 My projects
-              </span>
-              <h2
-                className="
-                  font-bold
-                  text-3xl
-                  sm:text-4xl
-                  md:text-[40px]
-                  text-dark
-                  mb-4
-                  "
-              >
-                Latest work
               </h2>
-              <p className="text-base text-body-color">
+              <span className="text-base">
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration in some form.
-              </p>
+              </span>
             </div>
           </div>
         </div>
@@ -64,13 +52,12 @@ const Card = () => {
                         mb-2
                         inline-block
                         hover:text-primary
-                        text-white
                         "
                     >
                       {post.title}
                     </Link>
                   </h3>
-                  <p className="text-base text-body-color">{post.sub_title}</p>
+                  <span className="text-base">{post.sub_title}</span>
                 </div>
               </div>
             </div>

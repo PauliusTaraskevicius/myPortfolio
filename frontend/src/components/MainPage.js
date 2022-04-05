@@ -14,7 +14,7 @@ const MainPage = () => {
     <React.Fragment>
       <Navbar />
       <Hero />
-      <About />
+      <About/>
       <Card />
       <SwitchBox />
       <Contact />

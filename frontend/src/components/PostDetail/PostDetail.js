@@ -43,18 +43,17 @@ const PostDetail = () => {
               className="w-full rounded-lg rounded-b-none object-cover"
             />
           </div>
-          <div className="header-modal py-3 px-4 bg-blue-400 text-white font-semibold shadow-lg text-lg break-words">
+          <div className="header-modal py-3 px-4 bg-blue-400 font-semibold shadow-lg text-lg break-words text-center">
             {dataState.data.title}
           </div>
-          <div className="header-modal py-3 px-4 text-gray-400 font-semibold text-md break-words">
+          <div className="header-modal py-3 px-4 font-semibold text-md break-words">
             {dataState.data.sub_title}
           </div>
-          <div className="header-modal px-4 text-gray-400 text-sm">
+          <div className="header-modal px-4  text-sm">
             {dataState.data.created}
           </div>
           <div className="body-modal p-4">
-            <p
-              className="text-gray-400"
+            <p className="post"
               dangerouslySetInnerHTML={{ __html: dataState.data.body }}
             />
           </div>
@@ -66,7 +65,7 @@ const PostDetail = () => {
                 alt="avatar"
               />
               <button
-                className="ml-2 bg-red-500 text-white px-8 rounded-lg py-2 hover:bg-red-700"
+                className="ml-2 bg-red-500 px-8 rounded-lg py-2 hover:bg-red-700"
                 onClick={back}
               >
                 Close

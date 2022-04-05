@@ -8,9 +8,12 @@
   scroll-behavior: smooth;
 }
 
+/* rgb(250, 240, 230) smelio spalva */
+/* rgb(31 41 55) original spalva tamsi */
+
 html,
 body {
-  background-color: rgb(31 41 55);
+  
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -22,7 +25,7 @@ h2,
 h3,
 h4,
 span {
-  color: black;
+  
 }
 
 hr {

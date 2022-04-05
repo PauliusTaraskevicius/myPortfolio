@@ -55,13 +55,13 @@ const Contact = () => {
                 draggable
                 pauseOnHover
             />
-               <h3 className="text-2xl text-white-900 font-semibold text-center text-white">Contact me!</h3>
+               <h3 className="text-2xl text-white-900 font-semibold text-center">Contact me!</h3>
                <div className="flex space-x-5 mt-3">
-                   <input type="text" name="name" id="formborder" placeholder="Your Name" className="p-2 w-1/2" required/>
-                   <input type="tel" name="phone" id="formborder" placeholder="Your Number" className="p-2 w-1/2"/>
+                   <input type="text" name="name" id="formborder" placeholder="Your Name" className="p-2 w-1/2 shadow-md" required/>
+                   <input type="tel" name="phone" id="formborder" placeholder="Your Number" className="p-2 w-1/2 shadow-md"/>
                </div>
-               <input type="email" name="email" id="formborder" placeholder="Your Email" className="p-2 w-full mt-3" required/>
-               <textarea name="message" id="formborder" cols="10" rows="3" placeholder="Your message..." className="p-2 mt-3 w-full"></textarea>
+               <input type="email" name="email" id="formborder" placeholder="Your Email" className="p-2 w-full mt-3 shadow-md" required/>
+               <textarea name="message" id="formborder" cols="10" rows="3" placeholder="Your message..." className="p-2 mt-3 w-full shadow-md"></textarea>
                <p className="font-bold text-sm mt-3 text-white">GDPR Agreement *</p>
                <div className="flex items-baseline space-x-2 mt-2">
                    <input type="checkbox" name="" id="" className="inline-block" required/>
