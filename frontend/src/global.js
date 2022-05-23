@@ -29,19 +29,15 @@ export const GlobalStyles = createGlobalStyle`
         background: ${({ theme }) => theme.circle1};
     }
 
-    .coding {
-        background: ${({ theme }) => theme.coding};
-    }
-
-    .terminaltxt {
-        color: ${({ theme }) => theme.terminaltxt}
-    }
-
     .herotxt {
         color: ${({ theme }) => theme.herotxt}
     }
 
     .btnColorOnChange {
         background: ${({ theme }) => theme.btnColorOnChange}
+    }
+
+    .submitSubscribeBtn {
+        background: ${({ theme }) => theme.submitSubscribeBtn}
     }
 `;

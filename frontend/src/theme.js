@@ -7,11 +7,11 @@ export const darkTheme = {
   h3: "rgb(255,255,255)",
   span: "rgb(255,255,255)",
 
-  // terminal
-  coding: "rgb(45, 55, 72)",
-
   // colorPaletteChange
   btnColorOnChange: "rgb(130, 202, 255)",
+
+  // contact: submit/subscribe button
+  submitSubscribeBtn: "rgb(59, 123, 191)",
 };
 
 export const lightTheme = {
@@ -23,11 +23,11 @@ export const lightTheme = {
   h3: "rgb(0,0,0)",
   span: "rgb(0,0,0)",
 
-  // terminal
-  coding: "rgb(230, 207, 184)",
   herotxt: "rgb(255,255,255)",
-  terminaltxt: "rgb(0,0,0)",
 
   // colorPaletteChange
   btnColorOnChange: "rgb(46,68,130)",
+
+  // contact: submit/subscribe button
+  submitSubscribeBtn: "rgb(47, 98, 153)",
 };

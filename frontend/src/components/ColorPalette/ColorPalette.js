@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 
-
 const moonSvg = (
   <svg
     xmlnsXlink="http://www.w3.org/2000/svg"
@@ -38,13 +37,13 @@ const sunSvg = (
 );
 
 const ColorPalette = (props) => {
-  const [svg, setSvg] = useState(moonSvg);
+  const [svg, setSvg] = useState(sunSvg);
 
   const svgHandler = () => {
-    if (svg === moonSvg) {
-      setSvg(sunSvg);
-    } else {
+    if (svg === sunSvg) {
       setSvg(moonSvg);
+    } else {
+      setSvg(sunSvg);
     }
   };
 
@@ -57,7 +56,7 @@ const ColorPalette = (props) => {
     <div className="fixed right-0 mr-4 z-10 lg:inset-x-auto bottom-6 lg:right-8 xl:right-10 xl:bottom-8">
       <div className="flex flex-wrap">
         <button
-          className="btnColorOnChange text-white font-bold py-2 px-4 rounded-full"
+          className="btnColorOnChange zoom text-white font-bold py-2 px-4 rounded-full"
           onClick={multipleEventHandler}
         >
           {svg}

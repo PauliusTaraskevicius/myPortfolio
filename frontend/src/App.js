@@ -10,19 +10,19 @@ import { GlobalStyles } from "./global.js";
 import { ThemeProvider } from "styled-components";
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
+    if (theme === "dark") {
       setTheme("light");
+    } else {
+      setTheme("dark");
     }
   };
 
   return (
     <React.Fragment>
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
         <GlobalStyles />
         <ColorPalette toggleTheme={toggleTheme} />
         <MainPage />

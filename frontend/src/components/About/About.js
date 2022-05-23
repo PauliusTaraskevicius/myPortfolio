@@ -1,5 +1,11 @@
 import React from "react";
 
+import freelancer from "../../images/career.png";
+import programming from "../../images/programming.png";
+import lightbulb from "../../images/lightbulb.png";
+import heart from "../../images/heart.png";
+import portfolio from "../../images/portfolio.jpg";
+
 const About = (props) => {
   return (
     <section className="dark:bg-gray-800" id="about">
@@ -7,65 +13,36 @@ const About = (props) => {
         <div className="w-full lg:w-1/2">
           <div className="lg:max-w-lg">
             <h1 className="text-3xl font-bold tracking-wide lg:text-5xl">
-              Full Stack Developer
+              Who is this guy? 🤔
             </h1>
 
             <div className="mt-8 space-y-5">
               <p className="flex items-center -mx-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <img className="mx-2" src={freelancer} alt="freelancer" />
 
-                <span className="mx-2">Clean and Simple Layout</span>
+                <span className="mx-2">Currently working as a freelancer with a passion for building digital services/stuff.</span>
               </p>
 
               <p className="flex items-center -mx-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <img className="mx-2" src={programming} alt="programming" />
 
-                <span className="mx-2">Just Copy Paste Codeing</span>
+                <span className="mx-2">
+                  Specializing in full stack development.Skills in Javascript, Python, HTML, CSS.Frameworks/Libraries Django, React.
+                </span>
               </p>
 
               <p className="flex items-center -mx-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6 mx-2 text-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <img className="mx-2" src={lightbulb} alt="lightbulb" />
 
-                <span className="mx-2">Easy to Use</span>
+                <span className="mx-2">
+                  Constantly improving in web development field.One of my motto "Constant and never ending improvement".
+                </span>
+              </p>
+
+              <p className="flex items-center -mx-2">
+                <img className="mx-2" src={heart} alt="heart" />
+
+                <span className="mx-2">In my free time I love doing sports, reading, gaming.</span>
               </p>
             </div>
           </div>
@@ -73,9 +50,9 @@ const About = (props) => {
 
         <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
           <img
-            className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl"
-            src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-            alt="profileimage"
+            className="zoom object-cover w-full h-full mx-auto rounded-lg lg:max-w-2xl"
+            src={portfolio}
+            alt="portfolioimage"
           />
         </div>
       </div>

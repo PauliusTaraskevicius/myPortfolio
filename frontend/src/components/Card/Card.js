@@ -17,19 +17,17 @@ const Card = () => {
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="w-full px-4">
             <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
-              <h2 className="font-bold text-3xl mb-2 block">
-                My projects
-              </h2>
+              <h2 className="font-bold text-3xl mb-2 block">My projects</h2>
               <span className="text-base">
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
+                Here's a list of most of the projects I've been working on
+                lately.
               </span>
             </div>
           </div>
         </div>
         <div className="flex flex-wrap -mx-4 text-center">
           {dataState.data.map((post) => (
-            <div key={post.slug} className="w-full md:w-1/2 lg:w-1/3 px-4">
+            <div key={post.slug} className="zoom w-full md:w-1/2 lg:w-1/3 px-4">
               <div className="max-w-[370px] mx-auto mb-10">
                 <div className="rounded overflow-hidden mb-4">
                   <img

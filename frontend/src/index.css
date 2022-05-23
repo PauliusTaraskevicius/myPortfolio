@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  
 }
 
 /* rgb(250, 240, 230) smelio spalva */
@@ -13,7 +14,6 @@
 
 html,
 body {
-  
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -25,7 +25,6 @@ h2,
 h3,
 h4,
 span {
-  
 }
 
 hr {
@@ -37,4 +36,12 @@ hr {
 img {
   height: auto;
   max-width: 100%;
+}
+
+.zoom {
+  transition: transform 0.5s;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
 }
