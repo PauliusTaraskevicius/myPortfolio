@@ -64,7 +64,10 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="text-white py-4 px-6 sm:border-b-2 border-transparent  sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
-            <a className="link" href="/">
+            <a
+              className="link"
+              href="https://github.com/PauliusTaraskevicius/myPortfolio"
+            >
               Source
             </a>
           </li>

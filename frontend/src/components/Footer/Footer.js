@@ -1,5 +1,7 @@
 import React from "react";
 
+import MailchimpSubscribeContainer from "../MailChimp/MailChimp";
+
 const Footer = () => {
   return (
     <footer className="flex justify-center px-4">
@@ -8,26 +10,13 @@ const Footer = () => {
           Subscribe and never miss out on new updates, projects and more! ✔
         </h3>
 
-        <div className="flex justify-center mt-6">
-          <div className="bg-white rounded-lg">
-            <div className="flex flex-wrap justify-between shadow-lg md:flex-row">
-              <input
-                type="email"
-                className="m-1 p-2 appearance-none text-sm focus:outline-none"
-                placeholder="Enter your email"
-              />
-              <button className="submitSubscribeBtn w-full m-1 p-2 text-sm text-white rounded-lg font-semibold uppercase lg:w-auto">
-                subscribe
-              </button>
-            </div>
-          </div>
-        </div>
+        <MailchimpSubscribeContainer />
 
         <hr className="h-px mt-6 bg-gray-700 border-none" />
 
         <div className="flex flex-col items-center justify-between mt-6 md:flex-row">
           <div>
-            <span className="text-xl font-bold">Brand</span>
+            <span className="text-md font-semibold">©Paulius Taraškevičius.All Rights Reserved</span>
           </div>
           <div className="flex mt-4 md:m-0 z-10">
             <div className="-mx-4">
