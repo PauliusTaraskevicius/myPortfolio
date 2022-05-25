@@ -50,7 +50,7 @@ const About = (props) => {
 
         <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
           <img
-            className="zoom object-cover w-full h-full mx-auto rounded-lg lg:max-w-2xl"
+            className="zoom object-fit w-full h-full mx-auto rounded-lg lg:max-w-2xl"
             src={portfolio}
             alt="portfolioimage"
           />

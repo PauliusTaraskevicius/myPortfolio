@@ -43,27 +43,27 @@ const Navbar = () => {
         </div>
 
         <ul className="hidden sm:flex cursor-pointer" id="navContent">
-          <li className="text-white py-4 px-6 sm:border-b-2 border-transparent sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent ">
             <Link to="/" className="link" onClick={() => scroll.scrollToTop()}>
               Home
             </Link>
           </li>
-          <li className="text-white py-4 px-6 sm:border-b-2 border-transparent sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent ">
             <Link to="about" className="link" smooth={true} duration={1000}>
               About
             </Link>
           </li>
-          <li className="text-white py-4 px-6 sm:border-b-2 border-transparent  sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent  ">
             <Link to="work" className="link" smooth={true} duration={1000}>
               Work
             </Link>
           </li>
-          <li className="text-white py-4 px-6 sm:border-b-2 border-transparent  sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent  ">
             <Link to="contact" className="link" smooth={true} duration={1000}>
               Contact
             </Link>
           </li>
-          <li className="text-white py-4 px-6 sm:border-b-2 border-transparent  sm:hover:text-blue-300 transition hover:bg-blue-600 duration-300 sm:hover:bg-transparent">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent  ">
             <a
               className="link"
               href="https://github.com/PauliusTaraskevicius/myPortfolio"

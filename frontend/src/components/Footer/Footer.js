@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="flex justify-center px-4">
       <div className="container py-6">
         <h3 className="text-center text-lg font-bold lg:text-2xl">
-          Subscribe and never miss out on new updates, projects and more! ✔
+          Subscribe and never miss out on new updates, projects and more! 😎
         </h3>
 
         <MailchimpSubscribeContainer />

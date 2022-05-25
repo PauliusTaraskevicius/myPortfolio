@@ -49,23 +49,19 @@ const PostDetail = () => {
           <div className="header-modal py-3 px-4 font-semibold text-md break-words">
             {dataState.data.sub_title}
           </div>
-          <div className="header-modal px-4  text-sm">
-            {dataState.data.created}
-          </div>
           <div className="body-modal p-4">
-            <p className="post"
+            <p
+              className="post"
               dangerouslySetInnerHTML={{ __html: dataState.data.body }}
             />
           </div>
           <div className="footer-modal px-4 pt-2.5 pb-4">
             <div className="flex justify-between">
-              <img
-                className="w-12 h-12 object-cover rounded-full mx-1 shadow"
-                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80"
-                alt="avatar"
-              />
+              <div className="header-modal text-md">
+                Published: {dataState.data.created}
+              </div>
               <button
-                className="ml-2 bg-red-500 px-8 rounded-lg py-2 hover:bg-red-700"
+                className="bg-red-500 px-3 rounded-lg py-2 hover:bg-red-600 transition-all "
                 onClick={back}
               >
                 Close
