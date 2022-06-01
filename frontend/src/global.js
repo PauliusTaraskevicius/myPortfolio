@@ -40,4 +40,6 @@ export const GlobalStyles = createGlobalStyle`
     .submitSubscribeBtn {
         background: ${({ theme }) => theme.submitSubscribeBtn}
     }
+
+
 `;

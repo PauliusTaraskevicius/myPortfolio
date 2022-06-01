@@ -6,6 +6,7 @@ import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 
 import "./Navbar.css";
+import coding from "../../images/coding.png";
 
 const Navbar = () => {
   const [navColor, setNavColor] = useState("transparent");
@@ -28,42 +29,46 @@ const Navbar = () => {
       >
         <div className="flex px-4 justify-between sm:py-0 pb-1">
           <img
-            src="https://ravencolevol.github.io/react-portfolio/static/b7742c4d36a8aad0eae9e469b8af55d5/e8676/logo.png"
+            src={coding}
             alt="Logo"
-            className="zoom h-12 cursor-pointer"
+            className="navLogo zoom p-2 cursor-pointer mt-1 rounded-full bg-white"
             onClick={() => scroll.scrollToTop()}
           />
-
           <button
-            className="text-blue-300 text-3xl sm:hidden block focus:outline-none"
+            className="text-blue-100 text-3xl sm:hidden block focus:outline-none"
             id="navIcon"
           >
             &#9776;
           </button>
         </div>
 
-        <ul className="hidden sm:flex cursor-pointer" id="navContent">
-          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent ">
+        <ul className="fadein hidden sm:flex cursor-pointer" id="navContent">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent">
             <Link to="/" className="link" onClick={() => scroll.scrollToTop()}>
               Home
             </Link>
           </li>
-          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent ">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent">
             <Link to="about" className="link" smooth={true} duration={1000}>
               About
             </Link>
           </li>
-          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent  ">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent">
+            <Link to="skills" className="link" smooth={true} duration={1000}>
+              Skills
+            </Link>
+          </li>
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent">
             <Link to="work" className="link" smooth={true} duration={1000}>
               Work
             </Link>
           </li>
-          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent  ">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent">
             <Link to="contact" className="link" smooth={true} duration={1000}>
               Contact
             </Link>
           </li>
-          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent  ">
+          <li className="navLinks text-white py-4 px-6 sm:border-b-2 border-transparent">
             <a
               className="link"
               href="https://github.com/PauliusTaraskevicius/myPortfolio"

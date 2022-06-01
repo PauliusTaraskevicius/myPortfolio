@@ -61,7 +61,7 @@ const Contact = () => {
                    <input type="tel" name="phone" id="formborder" placeholder="Your Number" className="p-2 w-1/2 shadow-lg"/>
                </div>
                <input type="email" name="email" id="formborder" placeholder="Your Email" className="p-2 w-full mt-3 shadow-lg" required/>
-               <textarea name="message" id="formborder" cols="10" rows="3" placeholder="Your message..." className="p-2 mt-3 w-full shadow-lg"></textarea>
+               <textarea name="message" id="formborder" cols="10" rows="3" placeholder="Your message..." className="p-2 mt-3 w-full shadow-lg" required></textarea>
                <p className="font-bold text-sm mt-3 text-white">GDPR Agreement *</p>
                <div className="flex items-baseline space-x-2 mt-2">
                    <input type="checkbox" name="" id="" className="inline-block" required/>

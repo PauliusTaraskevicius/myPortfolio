@@ -7,6 +7,7 @@ import Contact from "./Contact/Contact";
 import Footer from "./Footer/Footer";
 import Card from "./Card/Card";
 import SwitchBox from "./Switcher/SwitchBox";
+import Skills from "./Skills/Skills";
 
 const MainPage = () => {
 
@@ -15,6 +16,7 @@ const MainPage = () => {
       <Navbar />
       <Hero />
       <About/>
+      <Skills />
       <Card />
       <SwitchBox />
       <Contact />

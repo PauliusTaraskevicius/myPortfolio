@@ -38,6 +38,7 @@ img {
   max-width: 100%;
 }
 
+/* Zoom in "on hover" */
 .zoom {
   transition: transform 0.5s;
 }
@@ -45,3 +46,45 @@ img {
 .zoom:hover {
   transform: scale(1.2);
 }
+
+/* Slight move top "on hover" */
+.move-top {
+  transition: transform ease 300ms;
+}
+
+.move-top:hover {
+  transform: translate(0, -10px);
+}
+
+/*Hero Animation*/
+.line {
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.anim-typewriter {
+  animation: typewriter 1s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+    
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15rem;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+

@@ -40,14 +40,17 @@ const PostDetail = () => {
             <img
               src={`${BASE_URL}${dataState.data.thumbnail}`}
               alt="post_image"
-              className="w-full rounded-lg rounded-b-none object-cover"
+              className="w-full rounded-lg rounded-b-none object-fit"
             />
           </div>
-          <div className="header-modal py-3 px-4 bg-blue-400 font-semibold shadow-lg text-lg break-words text-center">
+          <div className="header-modal py-3 px-4 font-semibold text-lg break-words text-center">
             {dataState.data.title}
           </div>
           <div className="header-modal py-3 px-4 font-semibold text-md break-words">
             {dataState.data.sub_title}
+          </div>
+          <div className="header-modal text-sm px-4">
+                Published: {dataState.data.created}
           </div>
           <div className="body-modal p-4">
             <p
@@ -55,13 +58,21 @@ const PostDetail = () => {
               dangerouslySetInnerHTML={{ __html: dataState.data.body }}
             />
           </div>
+          <div className="header-modal px-4 font-semibold text-md break-words">
+            Technologies used
+          </div>
+          <div className="body-modal p-4 ">
+            <p
+              className="post"
+              dangerouslySetInnerHTML={{
+                __html: dataState.data.technologies_used,
+              }}
+            />
+          </div>
           <div className="footer-modal px-4 pt-2.5 pb-4">
-            <div className="flex justify-between">
-              <div className="header-modal text-md">
-                Published: {dataState.data.created}
-              </div>
+            <div className="flex justify-end">
               <button
-                className="bg-red-500 px-3 rounded-lg py-2 hover:bg-red-600 transition-all "
+                className="bg-red-500 px-2 rounded-lg py-2 hover:bg-red-600 transition-all"
                 onClick={back}
               >
                 Close

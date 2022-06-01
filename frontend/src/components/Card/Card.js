@@ -27,14 +27,14 @@ const Card = () => {
         </div>
         <div className="flex flex-wrap -mx-4 text-center">
           {dataState.data.map((post) => (
-            <div key={post.slug} className="zoom w-full md:w-1/2 lg:w-1/3 px-4">
+            <div  key={post.slug} className="zoom w-full md:w-1/2 lg:w-1/3 px-4">
               <div className="max-w-[370px] mx-auto mb-10">
                 <div className="rounded overflow-hidden mb-4">
-                  <img
+                  <Link to={`/posts/${post.slug}`}><img
                     src={`${BASE_URL}${post.thumbnail}`}
                     alt="post_img"
                     className="w-full"
-                  />
+                  /></Link>
                 </div>
                 <div>
                   <h3>
